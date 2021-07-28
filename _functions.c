@@ -34,11 +34,7 @@ int print_string(va_list list_argument)
 	/* si s es igual a NULL */
 	if (str == NULL)
 	{
-<<<<<<< HEAD
 		str = ("null");
-=======
-		str = "(null)";
->>>>>>> 49d98015f169492d6e3d4ddf3f744e6d09d96130
 	}
 	/**
 	 * para i igual a 0; mientras que s en la posicion i sea
