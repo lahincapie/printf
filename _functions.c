@@ -31,10 +31,10 @@ int print_string(va_list list_argument)
 	 */
 	str = va_arg(list_argument, char *);
 
-	/* si s es igual a NULL */
+	/* si str es igual a NULL */
 	if (str == NULL)
 	{
-		str = ("null");
+		str = "(null)";
 	}
 	/**
 	 * para i igual a 0; mientras que s en la posicion i sea
