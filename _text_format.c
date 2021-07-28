@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- * text_format - relaciona los tipos de
+ * *text_format - relaciona los tipos de
  * formato con la funcion correspondiente
  * @arga: trae los argumentos de format
  * @argb: posicion de cada argumento
- * &struct_format:  struct
+ *
  * Return: 0.
  */
 
@@ -15,7 +15,10 @@ int (*text_format(const char *arga, int argb))(va_list)
 {
 	/* lista de argumentos de la estructura struct_format */
 
-	struct_format list[] = {
+	/**
+	 * s_format -  structura
+	 */
+	s_format list[] = {
 		/**
 		 * primera columna ("") es el formato y la segunda
 		 * es la lista de funciones
