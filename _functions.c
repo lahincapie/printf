@@ -34,8 +34,7 @@ int print_string(va_list list_argument)
 	/* si s es igual a NULL */
 	if (str == NULL)
 	{
-		/* s es igual a la cadena (null) */
-		;
+		str = ("null");
 	}
 	/**
 	 * para i igual a 0; mientras que s en la posicion i sea
