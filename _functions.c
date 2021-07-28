@@ -98,9 +98,7 @@ int count_characters(unsigned int n)
  */
 int print_integer(va_list list_argument)
 {
-	/* se declaran dos variables enteras y se inicializa b en 0 */
 	int a, b = 0;
-	/* se declara un entero positivo */
 	unsigned int x;
 
 	/**
@@ -109,7 +107,6 @@ int print_integer(va_list list_argument)
 	 */
 	a = va_arg(list_argument, int);
 
-	/* si a es menor que 0 (numero negativo) */
 	if (a < 0)
 	{
 		/* se llama a la funcion _putchar y se pasa de parametro - (signo menos) */
@@ -121,11 +118,9 @@ int print_integer(va_list list_argument)
 	}
 	else
 	{
-		/* si a es mayor que 0 x es igual a */
 		x = a;
 	}
 
-	/* si x es mayor a 9 */
 	if (x > 9)
 	{
 		/* se retorna el valor de count_num y se le suma que que este en b */

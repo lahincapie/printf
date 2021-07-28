@@ -5,6 +5,7 @@
  * formato con la funcion correspondiente
  * @arga: trae los argumentos de format
  * @argb: posicion de cada argumento
+ * &struct_format:  struct
  * Return: 0.
  */
 
@@ -14,11 +15,6 @@ int (*text_format(const char *arga, int argb))(va_list)
 {
 	/* lista de argumentos de la estructura struct_format */
 
-	/**
-	 * struct - Structure
-	 * @args: pointer arguments
-	 * @func: pointer function
-	 */
 	struct_format list[] = {
 		/**
 		 * primera columna ("") es el formato y la segunda
