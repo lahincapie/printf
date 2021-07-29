@@ -1,4 +1,4 @@
-# PRINTF
+  PRINTF
 
      Descripcion
 
@@ -65,17 +65,19 @@
       si formant en la primera posicion es igual a % realice la siguiente verificacion en este punto
       verifica si la siguiente posicion es igual a % imprima "%" y sume uno al contador i 
        
-      for (i = 0; format[i] != '\0'; i++)
-	{
-		if (format[i] == '%')
-		{
-			if (format[i + 1] == '%')
-			{
-				_putchar('%');
-				count++;
-				i++;
-			}
-			else if (text_format(format, i + 1) != NULL)
+                        	      if (format[i] == '%')
+	                              {
+		                         if (format[i + 1] == '%')
+		                        	{
+		                 		_putchar('%');
+			                	count++;
+			                        i++;
+                                                }
+
+      en este punto se realiza una directriz importante que permite verificar si el contenido de format
+      cumple con las condiciones de los caracteres especiales mencionados en la tabla anterior 
+
+else if (text_format(format, i + 1) != NULL)
 			{
 				count += text_format(format, i + 1)(list_argument);
 				i++;
