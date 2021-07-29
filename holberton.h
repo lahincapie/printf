@@ -7,16 +7,16 @@
 #include <unistd.h>
 
 /**
- * struct struct_format - Structure
+ * struct s_format - Structure
  * @args: pointer arguments
  * @func: pointer function
  */
 
-typedef struct struct_format
+typedef struct s_format
 {
 	char *args;
 	int (*func)(va_list);
-} struct_format;
+} s_format;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
