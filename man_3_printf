@@ -35,7 +35,7 @@ PRINTF
                          int _printf(const char *format, ...)
 
      
-donde se llama al programa y se le dice que se va a usar una lista de argumentos
+     donde se llama al programa y se le dice que se va a usar una lista de argumentos
      con el comando va_list y que se va a usar una variable list_argument es un tipo
      de dato despues se inicializa list_argument que es la encargada de llamar a format
 
@@ -57,7 +57,39 @@ donde se llama al programa y se le dice que se va a usar una lista de argumentos
                if (!format || (format[0] == '%' && format[1] == '\0'))
                                      return (-1);
 
+      despues de este paso entra a un for que cuenta los caracteres y los compara
 
-for (i = 0; format[i] != '\0'; i++)
-        {
-                if (format[i] == '%')
+
+                           for (i = 0; format[i] != '\0'; i++)
+
+      si formant en la primera posicion es igual a % realice la siguiente verificacion en este punto 
+       
+      for (i = 0; format[i] != '\0'; i++)
+	{
+		if (format[i] == '%')
+		{
+			if (format[i + 1] == '%')
+			{
+				_putchar('%');
+				count++;
+				i++;
+			}
+			else if (text_format(format, i + 1) != NULL)
+			{
+				count += text_format(format, i + 1)(list_argument);
+				i++;
+			}
+			else
+			{
+				_putchar(format[i]);
+				count++;
+			}
+		}
+		else
+		{
+			_putchar(format[i]);
+			count++;
+		}
+	}
+	va_end(list_argument);
+	return (count);
