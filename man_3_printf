@@ -62,7 +62,8 @@ PRINTF
 
                            for (i = 0; format[i] != '\0'; i++)
 
-      si formant en la primera posicion es igual a % realice la siguiente verificacion en este punto 
+      si formant en la primera posicion es igual a % realice la siguiente verificacion en este punto
+      verifica si la siguiente posicion es igual a % imprima "%" y sume uno al contador i 
        
       for (i = 0; format[i] != '\0'; i++)
 	{
